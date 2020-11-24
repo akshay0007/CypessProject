@@ -1,32 +1,21 @@
 ///<reference types="Cypress"/>
 
-class Home{
+class Home {
+  clickJobsTest() {
+    cy.get("#menu-item-2972 > a").click();
+    return this;
+  }
 
-    clickEndtoEndTest(){
-        const field=cy.get('#solutions > a:nth-child(4) > div > div > img')
-        field.click()
-        return this
-    }
+  clickPostJobsTest() {
+    cy.get("#menu-item-2974 > a").click();
+    return this;
+  }
 
-    clickTestAutomationTest(){
-        const field=cy.get('#solutions > a:nth-child(5) > div > div > img')
-        field.click()
-        return this
-    }
+  clickResumeTest() {
+    cy.get("#menu-item-2970 > a").click();
+    return this;
+  }
 
-    performanceTest(){
-        const field=cy.get('#solutions > a:nth-child(6) > div > div > img')
-        field.click()
-        return this
-    }
-
-    mobileTest(){
-        const field=cy.get('#solutions > a:nth-child(7) > div > div > img')
-        field.click()
-        return this
-    }
-
-    
 }
 
 export default Home;

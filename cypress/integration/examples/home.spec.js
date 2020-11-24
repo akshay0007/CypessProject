@@ -8,38 +8,32 @@ describe("homepage", function () {
   });
 
   beforeEach(function () {
-    cy.visit("https://abstracta.us/");
+    cy.visit("https://demo.wpjobboard.net/");
   });
 
-  it("home page clickEndtoEndTest", function () {
+  afterEach(function () {
+    console.log("after each");
+  });
+
+  after(function () {
+    console.log("after");
+  });
+
+  it("home page click jobs", function () {
     var field = new Home();
-    field.clickEndtoEndTest();
-    cy.get(
-      "#home > div.col-lg-6.col-md-6.col-sm-12.col-xs-12 > h1.solutions"
-    ).contains("End-to-End Software");
+    field.clickJobsTest();
+    cy.get("#post-2957 > header > h1").contains("Jobs");
   });
 
-  it("home page clickTestAutomationTest", function () {
+  it("home page clickpostjobs", function () {
     var field = new Home();
-    field.clickTestAutomationTest();
-    cy.get(
-      "#home > div.col-lg-6.col-md-6.col-sm-12.col-xs-12 > h1.solutions"
-    ).contains("Test Automation");
+    field.clickPostJobsTest();
+    cy.get("#post-2958 > header > h1").contains("Post a Job");  
   });
 
-  it("home page mobileTest", function () {
+  it("home page resume", function () {
     var field = new Home();
-    field.mobileTest();
-    cy.get(
-      "#home > div.col-lg-6.col-md-6.col-sm-12.col-xs-12 > h1.solutions"
-    ).contains("Mobile Testing");
+    field.clickResumeTest();
+    cy.get("#post-2960 > header > h1").contains("Resumes");  
   });
-});
-
-afterEach(function () {
-  console.log("after each");
-});
-
-after(function () {
-  console.log("after");
 });
