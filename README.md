@@ -1,9 +1,12 @@
 # CypessProject
 ==============================================
-addition details
-in home screen test click events and validate they are redirecting correctly or not(using hooks ,object models)
-in contact us screen we are submiting message to client validate happy senerio(using hook , object models,fixture)
-in login screen we validate correct on incorrect login attempt(using hooks, models)
+test cases details-----
+login screen=> we are validating correct on incorrect login attempt(using hooks, models)
+forget password=> validating when we are passing user, whether it is redirecting correct page or not(using ,cusotom commands).
+home screen => valiating events by clicking on different links (using hooks ,object models)
+contact us  => validation on submitting review on page(using hook , object models,fixture)
+alerts=> validating alert message when we click on submit button
+tabletests=> basic validation on tables
 
 
 ==============================================
